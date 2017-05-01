@@ -16,7 +16,18 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    firebase: {
+    apiKey: 'AIzaSyAS6g07L0qu_2Mi-Xc9fmYocVYdZZcgLog',
+    authDomain: 'pokedexcoments.firebaseapp.com',
+    databaseURL: 'https://YOUR-FIREBASE-APP.firebaseio.com',
+    storageBucket: 'pokedexcoments.appspot.com',
+  },
+  // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

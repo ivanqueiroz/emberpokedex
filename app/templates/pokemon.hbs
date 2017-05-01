@@ -1,1 +1,44 @@
-<h1>Um Pokemon</h1>
+<div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">#{{zero-pad model.pokemon.id}}: {{sentence-case model.pokemon.name}}</h3>
+      </div>
+      <div class="panel-body">
+        <img src={{model.pokemon.sprites.front_default}}>
+        <p>Height: {{height model.pokemon.height}}</p>
+        <p>Weight: {{weight model.pokemon.weight}}</p>
+        <p>Base experience: {{model.base_experience}}</p>
+      </div>
+    </div>
+  </div>
+<div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Base Stats</h4>
+      </div>
+      <table class="table _stat-table">
+        <tbody>
+            {{#each model.pokemon.stats as |statInfo|}}
+              <tr>
+                <th scope="row'">{{sentence-case statInfo.stat.name}}</th>
+                <td>{{statInfo.base_stat}}</td>
+              </tr>
+            {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">Description</h4>
+      </div>
+      <div class="list-group">
+        {{#each model.desc.descriptions as |desc|}}
+        <strong>{{desc.description}}</strong> ({{desc.language.name}})<br>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

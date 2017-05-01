@@ -4,7 +4,7 @@
         <h4>Browse Pok&eacute;mon:</h4>
         <div class="list-group">
             {{#each model.results as |result|}} 
-                {{#link-to 'pokemon' result.name classNames='list-group-item'}} 
+                {{#link-to 'pokemon' result.url classNames='list-group-item'}} 
                     {{sentence-case result.name}}
                 {{/link-to}} 
             {{/each}}
