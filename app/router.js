@@ -12,11 +12,9 @@ Router.map(function() {
   
   this.route('contact');
   
-  this.route('pokemon', {
-    path: 'pokemon/:name'
-  });
+  this.route('pokemon', { path: 'pokemon/:name'});
   
-  this.route('pokemons');
+  this.route('pokemons', { path: 'pokemons/:url'});
 
 });
 

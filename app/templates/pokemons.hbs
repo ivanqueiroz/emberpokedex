@@ -9,5 +9,17 @@
                 {{/link-to}} 
             {{/each}}
         </div>
-    </div>
+        <div class="btn-group">
+            {{#if model.previous}}
+            {{#link-to 'pokemons' model.previous classNames='btn btn-links'}}
+            &lt; Previous
+            {{/link-to}}
+            {{/if}}
+            {{#if model.next}}
+            {{#link-to 'pokemons' model.next classNames='btn btn-links'}}
+            Next &gt; 
+            {{/link-to}}
+            {{/if}}
+        </div>
+    </div> 
 </div>
