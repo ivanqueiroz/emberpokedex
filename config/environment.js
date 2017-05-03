@@ -19,8 +19,9 @@ module.exports = function(environment) {
     firebase: {
     apiKey: 'AIzaSyAS6g07L0qu_2Mi-Xc9fmYocVYdZZcgLog',
     authDomain: 'pokedexcoments.firebaseapp.com',
-    databaseURL: 'https://YOUR-FIREBASE-APP.firebaseio.com',
+    databaseURL: 'https://pokedexcoments.firebaseio.com/',
     storageBucket: 'pokedexcoments.appspot.com',
+    messagingSenderId: "260422166197"
   },
   // if using ember-cli-content-security-policy
     contentSecurityPolicy: {

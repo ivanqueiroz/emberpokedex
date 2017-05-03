@@ -14,10 +14,6 @@ Router.map(function() {
   this.route('pokemon', { path: 'pokemon/:url'});
 
   this.route('pokemons', { path: 'pokemons/:url'});
-
-  this.route('comment', function() {
-    this.route('new');
-  });
 });
 
 export default Router;

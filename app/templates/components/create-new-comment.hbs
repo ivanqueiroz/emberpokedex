@@ -1,0 +1,38 @@
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">New Comment</h4>
+    </div>
+    <div class="panel-body">
+      <form id="newComment">
+        <p>
+          {{input value=newComment.comment.email placeholder="Email"}} {{input value=newComment.comment.name placeholder="Name"}}
+        </p>
+        <p>
+          {{textarea value=newComment.comment.text placeholder="Content" rows="10" cols="43"}}
+        </p>
+        <p>
+          <button {{action 'createComment' newComment}}>Publish</button>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">Comments</h4>
+    </div>
+    <div class="list-group">
+      <ul class="nav">
+        {{#each newComment.comment as |comm|}}
+        <li class="list-group-item">
+          <h4 class="list-group-item-heading">{{comm.name}}</h4>
+          <small>{{comm.email}}</small>
+          <p class="list-group-item-text">{{comm.text}}</p>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
