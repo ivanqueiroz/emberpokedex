@@ -11,7 +11,9 @@ export default Ember.Route.extend({
         return RSVP.hash({
             pokemon: Ember.$.getJSON("https://pokeapi.co/api/v2/pokemon/" + id),
             desc: Ember.$.getJSON("https://pokeapi.co/api/v2/characteristic/" + id),
-            comment: this.store.query('comment', { filter: { 'idPokemon': id } })
+            comment: this.store.findAll('comment').then(results => results.filter((comment) => {
+                    return comment.get('idPokemon') === id; 
+                 }))
         });
 
     },
